@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage('deploy loki'){
+            steps{
+                sh 'cd /home/nithinnith24/loki-1'
+                sh 'ansible-playbook /home/nithinnith24/loki-1/loki.yml'
+            }
+        }
+    }
+}
